@@ -1,31 +1,8 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-
-<suite name="Smoke Test Suite" verbose="1" parallel="false" thread-count="4" configfailurepolicy="continue">
-
-	<listeners>
-		<listener class-name="samplereporter.HTMLReporter" />
-		<listener class-name="utils.BaseTest" />
-	</listeners>
-
-	<test name="Sample_Test_Class">
-		<parameter name="os" value="windows" />
-		<parameter name="os_version" value="VISTA" />
-		<parameter name="browser" value="firefox" />
-		<parameter name="browser_version" value="46.0.1" />
-		
-		<parameter name="expected_text" value="Persistent Systems"/>
-		
-		<groups>
-			<run>
-				<exclude name="regression" />
-				<include name="Smoke" />
-			</run>
-		</groups>
-
-		<classes>
-			<class name="uitests.SampleTestClass" />
-		</classes>
-
-	</test>
-
-</suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+      <class name="com.cucumber.tests.RunCukesTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
